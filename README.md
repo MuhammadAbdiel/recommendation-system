@@ -25,8 +25,8 @@ Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
 
 Untuk menjawab pertanyaan di atas, maka akan dijabarkan sebagai berikut:
 
-- Model yang cocok untuk menyelesaikan masalah tersebut adalah model yang berbasis dengan konten atau biasa disebut _Content-Based Filtering_.
-- Melakukan evaluasi terhadap metrik dari model _Machine Learning_ tersebut.
+- Menemukan model _Machine Learning_ yang cocok untuk menyelesaikan permasalahan tersebut.
+- Menentukan hasil rekomendasi suatu model _Machine Learning_ yang dapat dikatakan baik.
 
 ### Solution Statements
 
@@ -49,7 +49,20 @@ Berikut merupakan informasi dari dataset yang digunakan:
 
 Tabel 1. Informasi Dataset
 
+Setelah melakukan observasi pada dataset yang diunduh pada kaggle, didapat informasi sebagai berikut:
+
 Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
+
+- **movies.csv**
+
+  - Terdapat 9742 baris pada _dataset_
+  - Tidak ada nilai _null_ pada kolom apapun pada _dataset_
+  - Terdapat 20 genre yang berbeda pada kolom _genres_
+
+- **ratings.csv**
+
+  - Terdapat 100836 baris pada _dataset_
+  - Tidak ada nilai _null_ pada kolom apapun pada _dataset_
 
 ### Deskripsi Variabel
 
@@ -98,12 +111,13 @@ Berikut merupakan tahapan-tahapan dalam melakukan data preparation:
 - _Mengonversi Data Series Menjadi Bentuk List_  
   Proses ini dilakukan dengan menggunakan fungsi [tolist()](https://pandas.pydata.org/docs/reference/api/pandas.Series.tolist.html) agar data lebih mudah diproses pada tahap pemodelan.
 
-## Modeling
+- _Melakukan Vektorisasi dengan TF-IDF_  
+  Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi [tfidfvectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
+
+## Modelling
 
 Setelah data selesai disiapkan, proses selanjutnya adalah membuat model adapun tahap-tahapnya diantaranya sebagai berikut:
 
-- _Melakukan Vektorisasi dengan TF-IDF_  
-  Pada tahap ini data yang telah disiapkan dikonversi menjadi bentuk vektor menggunakan fungsi [tfidfvectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) dari library sklearn untuk mengidentifikasi korelasi antara judul film dengan kategori genrenya.
 - _Mengukur tingkat kesamaan dengan [Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)_  
   Setelah data dikonversi menjadi bentuk vektor, selanjutnya ukur tingkat kesamaan antara dua vektor dan menentukan apakah kedua vektor tersebut menunjuk ke arah yang sama. Semakin kecil sudut cosinus, semakin besar nilai cosine similarity.
 
@@ -151,6 +165,18 @@ Karena model yang digunakan untuk proyek kali ini adalah **_Content-Based Filter
 Gambar 5. Rumus _precision_ sistem rekomendasi
 
 Berdasarkan hasil yang telah ditampilkan Tabel 3 pada bagian [_Result_](#result) dapat disimpulkan bahwa dari 10 judul film yang direkomendasikan, ada 10 film yang relevan oleh karena itu nilai _Precision_ dari model ini adalah 10/10 atau 100%.
+
+### Relevansi Terhadap Problem Statement:
+
+Model Content-Based Filtering yang diimplementasikan berhasil memberikan rekomendasi film yang relevan berdasarkan preferensi pengguna. Hal ini menjawab langsung kebutuhan untuk meningkatkan pengalaman pengguna dalam menemukan konten yang sesuai dengan minat mereka.
+
+### Pencapaian Goals:
+
+Tujuan utama proyek adalah mengembangkan sistem rekomendasi yang efektif. Dengan mencapai nilai Precision 100%, dapat disimpulkan bahwa model berhasil memberikan rekomendasi yang sangat sesuai dengan preferensi pengguna. Ini mengindikasikan pencapaian goals dalam meningkatkan kualitas rekomendasi produk.
+
+### Dampak Terhadap Business Understanding:
+
+Implementasi model ini memiliki dampak positif terhadap pemahaman bisnis, karena meningkatkan retensi pengguna melalui rekomendasi yang lebih personal. Dengan memberikan rekomendasi yang akurat, sistem ini dapat meningkatkan engagement pengguna dan potensialnya untuk meningkatkan konversi penjualan.
 
 ## Conclusion
 
