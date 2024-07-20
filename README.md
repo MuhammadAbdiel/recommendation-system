@@ -29,7 +29,8 @@ Berdasarkan latar belakang di atas, rincian masalahnya adalah sebagai berikut:
 
 Untuk menjawab pertanyaan di atas, maka akan dijabarkan sebagai berikut:
 
-- Menemukan model _Machine Learning_ yang cocok untuk menyelesaikan permasalahan tersebut.
+- Pendekatan yang cocok untuk menyelesaikan masalah tersebut adalah pendekatan yang berbasis dengan konten atau biasa disebut Content-Based Filtering.
+- Menggunakan model cosin similarity untuk menyelesaikan permasalahan tersebut.
 - Menentukan hasil rekomendasi suatu model _Machine Learning_ yang dapat dikatakan baik.
 
 ### Solution Statements
@@ -82,9 +83,10 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 
 - **ratings.csv**  
   ![ratings](https://github.com/user-attachments/assets/304adc28-ca9a-4863-80de-2ceefc18fa19)
-  
+
   Gambar 2. Informasi variabel ratings  
   Variabel-variabel yang terdapat pada file ratings.csv adalah sebagai berikut:
+
   - _userId_: id user
   - _movieId_: id film
   - _rating_: rating yang diberikan user
