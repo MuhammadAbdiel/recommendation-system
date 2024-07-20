@@ -10,7 +10,11 @@ Tujuan dirancangnya sebuah sistem rekomendasi adalah untuk memberikan rekomendas
 
 Film merupakan salah satu bentuk media komunikasi massa dari berbagai macam teknologi dan berbagai unsur-unsur kesenian. Perpaduan yang seimbang dan harmonis antara seni sastra, seni musik, seni peran dan komedi dikemas menjadi satu dalam bentuk film [[2]](http://books.uinsby.ac.id/id/eprint/216/3/Yoyon%20Mudjiono_Kajian%20Semiotika%20dalam%20Film.pdf). Menonton film adalah alternatif hiburan yang sering dipilih ketika merasa penat atau bosan dengan rutinitas. Apalagi kini banyak tersedia _platform digital_ dari yang gratis hingga berbayar yang menawarkan beragam genre film dan bisa ditonton di mana saja melalui ponsel.
 
-Salah satu faktor yang mempengaruhi seseorang untuk menonton film adalah melihat dari kategori genrenya. Contohnya orang yang menyukai film Avengers kemungkinan juga akan menyukai film Thor, karena kedua film tersebut memiliki genre yang sama yaitu _Action_. Oleh karena itu di proyek kali ini perusahaan akan membuat sebuah sistem rekomendasi menggunakan pendekatan _Machine Learning_ guna meningkatkan _traffic platform_ mereka.
+Dengan begitu banyak pilihan film yang tersedia di platform digital, pengguna sering kali menghadapi kesulitan dalam menemukan film yang sesuai dengan minat mereka. Tanpa sistem rekomendasi yang efektif, pengguna mungkin merasa frustrasi karena harus mencari secara manual di antara ribuan judul, yang dapat mengakibatkan kebosanan dan penurunan kepuasan pengguna. Selain itu, kekurangan rekomendasi yang relevan dapat menyebabkan rendahnya keterlibatan pengguna dengan platform, sehingga mengurangi waktu yang dihabiskan di platform dan, pada akhirnya, menurunkan trafik keseluruhan.
+
+Untuk mengatasi masalah ini dan meningkatkan kepuasan pengguna, perusahaan berencana untuk mengimplementasikan sistem rekomendasi berbasis Machine Learning. Dengan menggunakan pendekatan ini, sistem dapat secara otomatis menyarankan film yang relevan berdasarkan genre yang disukai pengguna. Pendekatan ini tidak hanya akan membantu pengguna menemukan film yang sesuai dengan minat mereka tetapi juga meningkatkan trafik platform secara signifikan.
+
+Sistem rekomendasi ini akan menganalisis data genre dari film yang telah ditonton atau disukai pengguna untuk memberikan saran yang lebih personal dan relevan. Dengan cara ini, pengguna akan merasa lebih puas dan terlibat, yang pada gilirannya akan meningkatkan waktu yang dihabiskan di platform dan meningkatkan trafik keseluruhan. Implementasi sistem rekomendasi ini adalah langkah strategis dalam memenuhi kebutuhan pengguna, meningkatkan kepuasan, dan memaksimalkan potensi pertumbuhan platform.
 
 ## Bussiness Understanding
 
@@ -87,7 +91,7 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 ### Exploratory Data Analysis - Univariate Analysis
 
 - **Movies**  
-  ![unv-2](./images/eda-movies.png)  
+  ![unv-2](./images/eda-movies-2.png)  
   Gambar 3. Distribusi fitur genre
   Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
   - Sebagian besar sampel film dari dataset movies ber-genre _drama_ dan _comedy_, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre _drama_ dan _comedy_.
@@ -143,16 +147,16 @@ Dapat terlihat pada Tabel 2 bahwa film _Piper (2016)_ merupakan film dengan genr
 
 |     | movie_title                                       | genre     |
 | --- | ------------------------------------------------- | --------- |
-| 0   | A Plasticine Crow (1981)                          | Animation |
-| 1   | The Red Turtle (2016)                             | Animation |
-| 2   | The Monkey King (1964)                            | Animation |
-| 3   | Winter in Prostokvashino (1984)                   | Animation |
-| 4   | Vacations in Prostokvashino (1980)                | Animation |
-| 5   | Garfield's Pet Force (2009)                       | Animation |
-| 6   | Nasu: Summer in Andalusia (2003)                  | Animation |
-| 7   | Three from Prostokvashino (1978)                  | Animation |
-| 8   | Investigation Held by Kolobki (1986)              | Animation |
-| 9   | Fireworks, Should We See It from the Side or t... | Animation |
+| 0   | Merry Madagascar (2009)                           | Animation |
+| 1   | Investigation Held by Kolobki (1986)              | Animation |
+| 2   | Illusionist, The (L'illusionniste) (2010)         | Animation |
+| 3   | Vacations in Prostokvashino (1980)                | Animation |
+| 4   | Winnie the Pooh Goes Visiting (1971)              | Animation |
+| 5   | DC Super Hero Girls: Hero of the Year (2016)      | Animation |
+| 6   | Winnie the Pooh and the Day of Concern (1972)     | Animation |
+| 7   | Hulk Vs. (2009)                                   | Animation |
+| 8   | A Plasticine Crow (1981)                          | Animation |
+| 9   | Asterix: The Land of the Gods (Astérix: Le dom... | Animation |
 
 Tabel 3. Hasil rekomendasi
 
