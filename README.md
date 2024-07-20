@@ -71,7 +71,8 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 ### Deskripsi Variabel
 
 - **movies.csv**  
-  ![image](./images/movies.png)  
+  ![movies](https://github.com/user-attachments/assets/2426782c-55f9-4097-b475-3dca71f77fd9)
+
   Gambar 1. Informasi variabel movies  
    Variabel-variabel yang terdapat pada file movies.csv adalah sebagai berikut:
 
@@ -80,7 +81,8 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
   - _genres_: genre film
 
 - **ratings.csv**  
-  ![image](./images/ratings.png)  
+  ![ratings](https://github.com/user-attachments/assets/304adc28-ca9a-4863-80de-2ceefc18fa19)
+  
   Gambar 2. Informasi variabel ratings  
   Variabel-variabel yang terdapat pada file ratings.csv adalah sebagai berikut:
   - _userId_: id user
@@ -91,12 +93,12 @@ Pada berkas tersebut terdapat 2 file, yaitu movies.csv dan ratings.csv
 ### Exploratory Data Analysis - Univariate Analysis
 
 - **Movies**  
-  ![unv-2](./images/eda-movies-2.png)  
+  ![eda-movies-2](https://github.com/user-attachments/assets/fcac9152-606e-49a6-b763-2b78317f4983)
   Gambar 3. Distribusi fitur genre
   Dari hasil visualisasi pada Gambar 3 dapat disimpulkan bahwa:
   - Sebagian besar sampel film dari dataset movies ber-genre _drama_ dan _comedy_, hal tersebut menunjukkan bahwa film yang tersedia lebih banyak ber-genre _drama_ dan _comedy_.
 - **Rating**
-  ![unv-3](./images/eda-ratings.png)  
+  ![eda-ratings](https://github.com/user-attachments/assets/ef0edbc1-ec19-4121-95a4-988af3cf1bc4)
   Gambar 4. Visualisasi fitur numerik rating  
    Dari hasil visualisasi pada gambar 4 dapat disimpulkan bahwa:
   - Rentang rating film adalah 0,5 hingga 5
